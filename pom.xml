@@ -150,6 +150,13 @@
             <version>2.12.1</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>org.elasticsearch</groupId>
+            <artifactId>elasticsearch-spark-20_2.11-5.3.1</artifactId>
+            <version>5.3.1</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/elasticsearch-spark-20_2.11-5.3.1.jar</systemPath>
+        </dependency>
     </dependencies>
 
 </project>

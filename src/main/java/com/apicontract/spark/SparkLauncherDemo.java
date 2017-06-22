@@ -12,13 +12,14 @@ public class SparkLauncherDemo {
 
     public static final String SPARK_HOME = "U:\\spark-2.1.1-bin-hadoop2.7";
     public static final String APPLICATION_JAR = "U:\\pocs\\spark-launcher\\target\\launcher-1.0-SNAPSHOT.jar";
-    public static final String APPLICATION_CLASS = "com.apicontract.spark.SparkApp";
+    public static final String APPLICATION_CLASS = "com.apicontract.spark.ElasticSearchApp";
 
     public static void main(String args[]) throws Exception {
 
         SparkLauncher sparkLauncher = new SparkLauncher()
                 .setSparkHome(SPARK_HOME)
                 .setAppResource(APPLICATION_JAR)
+                .addJar("U:\\pocs\\spark-launcher\\lib\\elasticsearch-spark-20_2.11-5.3.1.jar")
                 .setMainClass(APPLICATION_CLASS)
                 .setMaster("local[*]");
         SparkAppHandle handle = sparkLauncher.startApplication();
